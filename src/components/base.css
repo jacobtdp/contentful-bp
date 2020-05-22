@@ -70,3 +70,12 @@ a {
   .list-inline li {
     display: inline-block;
   }
+
+
+  /* ///////////////JACOB////////////////// */
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 175px 1fr 175px;
+    width: 100vw;
+  }
