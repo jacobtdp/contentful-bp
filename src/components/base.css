@@ -37,17 +37,55 @@ a {
   padding: 5vmin 0;
 }
 
-/**
- * article grid
- */
+
+/* ///// template for article grid ///// */
 .article-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5vmin;
+  grid-template-areas: "a a a"
+                       "b c c"
 }
+
+/* ///// styling for first article preview ///// */
+.article-list > li { 
+  height: 22rem;
+}
+.article-list > li:nth-child(1){
+  grid-area: a;
+}
+.article-list > li:nth-child(1) > div {
+  position: relative;
+  height: 22rem;
+}
+.article-list > li:nth-child(1) > div > div {
+  position: absolute;
+}
+.gatsby-image-wrapper{
+  height: 100%;
+  width: 100%;
+}
+.preview-content{
+  top: 50%;
+  left: 60%;
+  transform: translate(0%, -50%);
+}
+
+
+/* ///// Styling for second article preview ///// */
+.article-list > li:nth-child(2){
+  grid-area: b;
+}
+.article-list > li:nth-child(3){
+  grid-area: c;
+}
+/* .article-list > li:nth-child(n+4){
+  grid-area: d;
+} */
+
 
 /**
  *
