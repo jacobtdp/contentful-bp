@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 @font-face {
   font-family: "Avenir";
   font-weight: 400;
@@ -91,7 +93,7 @@ grid-area: c;
 }
 .article-list > li:nth-child(1) > div {
   display: grid;
-  grid-template-rows: 75% 25%;
+  grid-template-rows: 66% 34%;
 }
 .article-list > li:nth-child(2) > div {
   display: grid;
@@ -143,9 +145,15 @@ grid-area: c;
 .sidebar {
   border: 1px solid black;
 }
+
 .preview-content {
   overflow: hidden;
+  font-family: 'Playfair Display';
 }
 .preview-content > p {
   margin-bottom: 0;
+  font-size: 12px;
+}
+.preview-content > h3 {
+  font-size: 18px;
 }
