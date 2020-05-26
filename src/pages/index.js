@@ -18,11 +18,10 @@ class RootIndex extends React.Component {
         <div className="content-container">
           <div className="left-ad"></div>
 
-          <div style={{ background: '#fff' }}>
+          <div>
             <Helmet title={siteTitle} />
             {/* <Hero data={author.node} /> */}
             <div className="wrapper">
-              <h2 className="section-headline">Recent articles</h2>
               <ul className="article-list">
                 {posts.map(({ node }) => {
                   return (
@@ -34,6 +33,8 @@ class RootIndex extends React.Component {
               </ul>
             </div>
           </div>
+
+          <div className="sidebar"></div>
 
           <div className="right-ad"></div>
         </div>
