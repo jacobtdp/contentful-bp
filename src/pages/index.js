@@ -2,15 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import Sidebar from '../components/sidebar';
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const sidebarStory = get(this, 'props.data.allContentfulSidebarStory.edges')
 
     return (
       <Layout location={this.props.location}>
@@ -20,7 +21,6 @@ class RootIndex extends React.Component {
 
           <div>
             <Helmet title={siteTitle} />
-            {/* <Hero data={author.node} /> */}
             <div className="wrapper">
               <ul className="article-list">
                 {posts.map(({ node }) => {
@@ -34,9 +34,19 @@ class RootIndex extends React.Component {
             </div>
           </div>
 
-          <div className="sidebar"></div>
+          <ul className="sidebar">
+            {sidebarStory.map(({ node }) => {
+              console.log(node)
+              return (
+                <li key={node.slug}>
+                  <Sidebar sidebarStory={node} sidebarBody={node.body.content[0].content[0].value}/>
+                </li>
+              )
+            })}
+          </ul>
 
           <div className="right-ad"></div>
+
         </div>
 
       </Layout>
@@ -48,6 +58,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
@@ -68,6 +79,34 @@ export const pageQuery = graphql`
         }
       }
     }
+
+    allContentfulSidebarStory(sort: {order: DESC}) {
+      edges {
+        node {
+          author {
+            name
+          }
+          body {
+            body
+            content {
+              content {
+                value
+              }
+            }
+          }
+          publishDate(formatString: "MMMM Do YYYY")
+          slug
+          subject
+          title
+          heroImage {
+            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+
     allContentfulPerson(
       filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
     ) {
