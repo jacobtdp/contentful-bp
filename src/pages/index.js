@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import Sidebar from '../components/sidebar';
+import Footer from '../components/footer';
 
 class RootIndex extends React.Component {
   render() {
@@ -48,6 +49,7 @@ class RootIndex extends React.Component {
           <div className="right-ad"></div>
 
         </div>
+        <Footer />
 
       </Layout>
     )
