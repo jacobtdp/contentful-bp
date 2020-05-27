@@ -17,10 +17,10 @@ export default () => (
     <ul className="sub-nav">
       <div></div>
       <div></div>
-      <li className="first-li">Cleaning</li>
-      <li>Fishing</li>
-      <li>Crabbing</li>
-      <li>Whaling</li>
+      <li className="first-li"><Link to="/cleaning">Cleaning</Link></li>
+      <li><Link to="/fishing">Fishing</Link></li>
+      <li><Link to="/cooking">Cooking</Link></li>
+      <li><Link to="/crabbing">Crabbing</Link></li>
       <div></div>
       <div></div>
     </ul>
