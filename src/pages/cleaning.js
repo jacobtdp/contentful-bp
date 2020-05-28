@@ -29,6 +29,10 @@ class Cleaning extends React.Component {
 
     if (typeof window !== 'undefined') {
         path = window.location.href.replace('https://grand-boilerplate.netlify.app/', '');
+        console.log(window.location.href.slice(0, 22));
+        if(window.location.href.slice(0, 22) == 'http://localhost:8000/'){
+          path = window.location.href.replace('http://localhost:8000/', '');
+        }
         if(path.charAt(path.length - 1) == '/'){
           path = path.slice(0, path.length - 1);
         }
