@@ -23,14 +23,23 @@ class Cooking extends React.Component {
   }
 
   componentWillMount() {
-    let path = window.location.href.replace('http://localhost:8000/', '');
-    const subjectToList = path.charAt(0).toUpperCase().concat('', path.slice(1));
+
+    let path;
+    let subjectToList = 'Fishing';
+
+    if (typeof window !== 'undefined') {
+        path = window.location.href.replace('https://grand-boilerplate.netlify.app/', '');
+        if(path.charAt(path.length - 1) == '/'){
+          path = path.slice(0, path.length - 1);
+        }
+        subjectToList = path.charAt(0).toUpperCase().concat('', path.slice(1));        
+    }
 
     this.state.posts.map(({ node }) => {
       let realNode = { node };
-      if(realNode.node.subject == subjectToList) {
-        this.state.postsArray.push(realNode);
-      }
+        if(realNode.node.subject == subjectToList) {
+            this.state.postsArray.push(realNode);
+        }
     });
 
     this.state.sidebarStory.map(({ node }) => {
