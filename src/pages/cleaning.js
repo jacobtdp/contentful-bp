@@ -43,6 +43,7 @@ class Cleaning extends React.Component {
       let realNode = { node };
         if(realNode.node.subject == subjectToList) {
             this.state.postsArray.push(realNode);
+            console.log('posts arrray: ' + JSON.stringify(realNode.node.title));
         }
     });
 
