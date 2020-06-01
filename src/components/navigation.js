@@ -2,11 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styles from './navigation.module.css'
 import './nav.css'
+import Slider from './slider';
 
 export default () => (
   <nav role="navigation" className='navigation'>
 
-    <ul className={styles.navigation}>
+    <Slider />
+
+    <ul className={`home-title ${styles.navigation}`}>
       <li className={styles.navigationItem}>
         <div className="header-title">
           <Link to="/">Boiler-Plate</Link>
@@ -24,5 +27,6 @@ export default () => (
       <div></div>
       <div></div>
     </ul>
+
   </nav>
 )
