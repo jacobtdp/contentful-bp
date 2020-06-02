@@ -38,7 +38,7 @@
 }
 .header-title > a {
     transition: none;
-    color: black;
+    color: #003c42;
 }
 .title-box {
     margin: 0;
@@ -46,7 +46,7 @@
 }
 .title-box:hover {
     color: white;
-    background-color: black;
+    background-color: #003c42;
     transition: all 0.1s ease-out;
 }
 .header-title > a:hover {

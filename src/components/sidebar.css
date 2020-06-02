@@ -5,19 +5,17 @@
     margin: 0;
     padding: 1em;
     background-color: white;
-    border-top: 7px solid black;
+    border-top: 7px solid #003c42;
     border-radius: 2px;
 }
 
 .sidebar-subject {
     color: white;
-    background-color: black;
+    background-color: #003c42;
     margin: 8px 0px 8px 0px;
     padding: 2px;
     display: inline;
     border-radius: 1px;
-    /* font-family: "Playfair Display"; */
-    /* letter-spacing: 1px; */
 }
 
 .sidebar-title {
@@ -28,7 +26,3 @@
 .sidebar-datetime {
     font-family: "Playfair Display";
 }
-
-/* .sidebar-body {
-
-} */

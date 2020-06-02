@@ -117,7 +117,7 @@ a {
 
 .article-list > li {
   box-shadow: 0 1px 1px 1px grey;
-  border-top: 3px solid black;
+  border-top: 3px solid #003c42;
   border-radius: 2px;
   padding: 1em;
   background-color: white;
@@ -143,6 +143,7 @@ a {
   width: 100vw;
   padding-top: 7em;
 }
+
 @media only screen and (max-width: 1200px) {
   .content-container {
     grid-template-columns: 130px 1fr 130px;
@@ -170,10 +171,13 @@ a {
   .article-list > li {
     margin-bottom: 1em;
   }
+  .content-container {
+    padding-top: 3em;
+  }
 }
 
 .sidebar {
-  border: 1px solid black;
+  border: 1px solid #003c42;
 }
 .preview-content {
   overflow: hidden;

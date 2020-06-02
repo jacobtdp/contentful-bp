@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+@media only screen and (min-width: 1200px) {
+    .blog-post {
+        margin-right: 2em;
+    }
+}
+
+.hero {
+    border-radius: 6px 6px 1px 1px;
+}
+h1 {
+    font-family: "Playfair Display";
+    margin-top: 0.4em !important;
+}
+.wrapper {
+    font-family: "Crimson Text";
+}
 .blog-post {
-    margin-right: 2em;
+    padding-bottom: 3em;
 }

@@ -24,7 +24,7 @@ class BlogPostTemplate extends React.Component {
 
           <div className="blog-post" style={{ background: '#fff' }}>
             <Helmet title={`${post.title} | ${siteTitle}`} />
-            <div className={heroStyles.hero}>
+            <div className={`hero ${heroStyles.hero}`}>
               <Img
                 className={heroStyles.heroImage}
                 alt={post.title}
