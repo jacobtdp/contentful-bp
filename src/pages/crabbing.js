@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import Sidebar from '../components/sidebar';
 import Footer from '../components/footer';
+import '../components/card.css';
 
 class Crabbing extends React.Component {
 
@@ -56,17 +57,15 @@ class Crabbing extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-
         <div className="content-container">
           <div className="left-ad"></div>
-
           <div>
             <Helmet title={this.state.siteTitle} />
             <div className="wrapper">
               <ul className="article-list">
                 {this.state.postsArray.map(({ node }) => {
                   return (
-                    <li key={node.slug}>
+                    <li key={node.slug} className="card2">
                       <ArticlePreview article={node} />
                     </li>
                   )
@@ -74,7 +73,6 @@ class Crabbing extends React.Component {
               </ul>
             </div>
           </div>
-
           <ul className="sidebar">
             {this.state.sidebarStoryArray.map(({ node }) => {
               return (
@@ -84,12 +82,9 @@ class Crabbing extends React.Component {
               )
             })}
           </ul>
-
           <div className="right-ad"></div>
-
         </div>
         <Footer />
-
       </Layout>
     )
   }
