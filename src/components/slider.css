@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display+SC&display=swap');
 
 .menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
     -webkit-transition: 250ms all;
@@ -57,7 +59,7 @@
 }
 
 .menu {
-    background: rgb(200,162,200);
+    background: #00838d;
     color: transparent;
     height: 64px;
     -webkit-user-select: none;
@@ -75,16 +77,22 @@
     color: white;
 }
 
+ul.active {
+    display: grid;
+}
 .menu-inner {
     height: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
 
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     font-family: 'Playfair Display';
+    font-weight: 400;
     font-size: 12px;
+    display: none;
+
+    letter-spacing: 0.3px;
 }
 
 .menu-link {
@@ -105,6 +113,7 @@
 
     justify-content: center;
     align-items: center;
+
 }
 .menu-link li {
     margin: auto;
@@ -112,15 +121,24 @@
 
 .slider {
     display: grid;
-    grid-template-columns: 60px 4fr;
+    grid-template-columns: 45px 4fr;
     position: fixed;
     width: 100%;
     z-index: 2;
 }
 
 nav.active {
-    background: rgb(200,162,200);
+    background: #00838d;
 }
+
+a {
+    text-decoration: none;
+}
+
+.menu-inner > .first-li {
+    border-left: 1px solid #00838d;
+}
+
 
 @media screen and (max-width: 768px) {
     .menu {
