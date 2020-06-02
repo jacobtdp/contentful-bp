@@ -88,6 +88,7 @@ ul.active {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-top: 1px;
 
     grid-template-columns: repeat(4, 1fr);
     font-family: 'Playfair Display';
@@ -117,6 +118,7 @@ ul.active {
     justify-content: center;
     align-items: center;
 
+    transition: all 0.1s ease-out;
 }
 .menu-link li {
     margin: auto;
@@ -127,6 +129,8 @@ ul.active {
     grid-template-columns: 45px 4fr;
     position: fixed;
     width: 100%;
+}
+.slider-active {
     z-index: 2;
 }
 

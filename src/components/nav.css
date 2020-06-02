@@ -18,6 +18,9 @@
     font-size: 14px;
     font-family: 'Playfair Display';
 }
+.sub-nav > li:hover {
+    box-shadow: 0 2px 2px 1px grey;
+}
 .first-li {
     border-left: 1px solid lightgrey;
 }
@@ -32,6 +35,24 @@
 .header-title {
     font-family: 'Playfair Display';
     font-size: 32px;
+}
+.header-title > a {
+    transition: none;
+    color: black;
+}
+.title-box {
+    margin: 0;
+    padding: 1em;
+}
+.title-box:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.1s ease-out;
+}
+.header-title > a:hover {
+    color: white;
+    transition: all 0.1s ease-out;
+
 }
 
 @media only screen and (max-width: 600px){

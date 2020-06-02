@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import Sidebar from '../components/sidebar';
 import Footer from '../components/footer';
+import '../components/card.css';
 
 class RootIndex extends React.Component {
   render() {
@@ -27,7 +28,7 @@ class RootIndex extends React.Component {
               <ul className="article-list">
                 {posts.map(({ node }) => {
                   return (
-                    <li key={node.slug}>
+                    <li key={node.slug} className="card2">
                       <ArticlePreview article={node} />
                     </li>
                   )

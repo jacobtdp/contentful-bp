@@ -10,7 +10,7 @@ export default () => (
     <Slider />
 
     <ul className={`home-title ${styles.navigation}`}>
-      <li className={styles.navigationItem}>
+      <li className={`title-box ${styles.navigationItem}`}>
         <div className="header-title">
           <Link to="/">Boiler-Plate</Link>
         </div>
