@@ -17,7 +17,7 @@ class Slider extends React.Component {
 
     render() {
         return (
-            <div className="slider">
+            <div className={`slider slider-${this.state.isBoxVisible ? "" : "active"}`}>
                 <nav onClick={this.toggleBox} className={`${this.state.isBoxVisible ? "" : "active"}`}>
                     <Hamburger rounded />
                 </nav>

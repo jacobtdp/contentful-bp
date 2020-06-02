@@ -74,6 +74,9 @@
     width: 100%;
 }
 .menu.active .menu-link {
+    color: #003c42;
+}
+.menu.active .menu-link:hover {
     color: white;
 }
 
